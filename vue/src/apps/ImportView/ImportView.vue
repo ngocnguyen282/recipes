@@ -258,7 +258,7 @@
                                             </b-button>
                                             <b-button @click="location.reload()" :disabled="import_loading">Restart
                                             </b-button>
-                                            <b-button @click="location.reload()" :disabled="import_loading">New Button</b-button>
+                                            <b-button @click="newButtonClickHandler" :disabled="import_loading">New Button</b-button>
                                         </b-button-group>
                                     </b-card-footer>
                                 </b-collapse>
@@ -563,6 +563,9 @@ export default {
                 }
             }
         },
+        newButtonClickHandler() {
+            console.log('New Button Clicked');
+        }
         /**
          * Action performed after URL import
          * @param action: action to perform after import
