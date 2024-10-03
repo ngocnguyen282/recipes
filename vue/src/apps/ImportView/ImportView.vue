@@ -54,6 +54,11 @@
                                                       @click="autoImport()">{{ $t('Import') }}
                                             </b-button>
 
+                                            <!-- Display the URL -->
+                                            <div v-if="currentURL" class="mt-3">
+                                                <p>Current URL: {{ currentURL }}</p>
+                                            </div>
+
                                             <!-- recent imports, nice for testing/development -->
                                             <!--                                            <div class="row mt-2"> -->
                                             <!--                                                <div class="col col-md-12">-->
