@@ -160,6 +160,10 @@
                                                                         class="fa fa-times"></i></b-button>
                                                             </b-button-group>
                                                         </div>
+                                                        <!-- New text below Keywords -->
+                                                        <div class="mt-2">
+                                                            <span class="h6">{{ $t('AdditionalText') }}</span>
+                                                        </div>
                                                     </b-card-title>
                                                     <b-card-body class="m-0 p-0 p-md-5">
                                                         <b-list-group>
