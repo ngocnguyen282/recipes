@@ -244,21 +244,7 @@
                                         <div class="d-flex justify-content-center mb-3" v-if="import_loading">
                                             <b-spinner variant="primary"></b-spinner>
                                         </div>
-                                        <b-button-group>
-                                            <b-button @click="importRecipe('view')" v-if="!import_multiple"
-                                                      :disabled="import_loading">Import &
-                                                View
-                                            </b-button> <!-- TODO localize -->
-                                            <b-button @click="importRecipe('edit')" variant="success"
-                                                      v-if="!import_multiple" :disabled="import_loading">Import & Edit
-                                            </b-button>
-                                            <b-button @click="importRecipe('import')" v-if="!import_multiple"
-                                                      :disabled="import_loading">Import &
-                                                Restart
-                                            </b-button>
-                                            <b-button @click="location.reload()" :disabled="import_loading">Restart
-                                            </b-button>
-                                        </b-button-group>
+                                        <p>Your additional text here.</p>
                                     </b-card-footer>
                                 </b-collapse>
                             </b-card>
