@@ -258,7 +258,6 @@
                                             </b-button>
                                             <b-button @click="location.reload()" :disabled="import_loading">Restart
                                             </b-button>
-                                            <button @click="logToConsole">Log to Console</button>
                                         </b-button-group>
                                     </b-card-footer>
                                 </b-collapse>
@@ -562,9 +561,6 @@ export default {
                     StandardToasts.makeStandardToast(this, StandardToasts.FAIL_CREATE)
                 }
             }
-        },
-        logToConsole() {
-            console.log("Button clicked! This is a message from the console.");
         },
         /**
          * Action performed after URL import
