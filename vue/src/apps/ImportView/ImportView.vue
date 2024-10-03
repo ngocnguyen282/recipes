@@ -256,11 +256,11 @@
                                                       :disabled="import_loading">Import &
                                                 Restart
                                             </b-button>
-                                            <b-button @click="importRecipe('newButton')" variant="success"
-                                                      v-if="!import_multiple" :disabled="import_loading">New Button
-                                            </b-button>
                                             <b-button @click="location.reload()" :disabled="import_loading">Restart
                                             </b-button>
+
+                                            <button @click="logToConsole">Log to Console</button>
+
                                         </b-button-group>
                                     </b-card-footer>
                                 </b-collapse>
@@ -522,7 +522,7 @@ export default {
     methods: {
         /**
          * Import recipe based on the data configured by the client
-         * @param action: action to perform after import (options are: edit, newButton, view, import)
+         * @param action: action to perform after import (options are: edit, view, import)
          * @param data: if parameter is passed ignore global application state and import form data variable
          * @param silent do not show any messages for imports
          */
@@ -565,14 +565,10 @@ export default {
                 }
             }
         },
-        newButtonClickHandler() {
-            console.log('New Button Clicked');
-        },
         /**
          * Action performed after URL import
          * @param action: action to perform after import
          *                edit: edit imported recipe
-         *                newButton: newButton 
          *                view: view imported recipe
          *                import: restart the importer
          *                nothing: do nothing
@@ -582,9 +578,6 @@ export default {
             switch (action) {
                 case 'edit':
                     window.location = resolveDjangoUrl('edit_recipe', recipe.id)
-                    break;
-                case 'newButton':
-                    window.location = resolveDjangoUrl('newButton_recipe', recipe.id)
                     break;
                 case 'view':
                     window.location = resolveDjangoUrl('view_recipe', recipe.id)
@@ -681,6 +674,9 @@ export default {
                 }
                 StandardToasts.makeStandardToast(this, StandardToasts.FAIL_IMPORT, err)
             })
+        },
+        logToConsole() {
+            console.log("Button clicked! This is a message from the console.");
         },
         /**
          * Function to automatically import multiple urls
