@@ -244,7 +244,6 @@
                                         <div class="d-flex justify-content-center mb-3" v-if="import_loading">
                                             <b-spinner variant="primary"></b-spinner>
                                         </div>
-                                        <p>Your additional text here.</p>
                                         <b-button-group>
                                             <b-button @click="importRecipe('view')" v-if="!import_multiple"
                                                       :disabled="import_loading">Import &
