@@ -258,6 +258,7 @@
                                             </b-button>
                                             <b-button @click="location.reload()" :disabled="import_loading">Restart
                                             </b-button>
+                                            <b-button @click="location.reload()" :disabled="import_loading">New Button</b-button>
                                         </b-button-group>
                                     </b-card-footer>
                                 </b-collapse>
