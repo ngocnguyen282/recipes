@@ -256,7 +256,7 @@
                                                       :disabled="import_loading">Import &
                                                 Restart
                                             </b-button>
-                                                <b-button @click="location.reload()" :disabled="import_loading">Restart
+                                            <b-button @click="location.reload()" :disabled="import_loading">Restart
                                             </b-button>
                                         </b-button-group>
                                     </b-card-footer>
