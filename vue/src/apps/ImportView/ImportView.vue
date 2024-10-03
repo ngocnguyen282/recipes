@@ -244,6 +244,7 @@
                                         <div class="d-flex justify-content-center mb-3" v-if="import_loading">
                                             <b-spinner variant="primary"></b-spinner>
                                         </div>
+                                        <p>Your additional text here.</p>
                                         <b-button-group>
                                             <b-button @click="importRecipe('view')" v-if="!import_multiple"
                                                       :disabled="import_loading">Import &
@@ -256,7 +257,7 @@
                                                       :disabled="import_loading">Import &
                                                 Restart
                                             </b-button>
-                                            <b-button @click="location.reload()" :disabled="import_loading">Restart
+                                                <b-button @click="location.reload()" :disabled="import_loading">Restart
                                             </b-button>
                                         </b-button-group>
                                     </b-card-footer>
